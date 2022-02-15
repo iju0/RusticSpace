@@ -1,4 +1,4 @@
-namespace BusinessLogicLayer;
+namespace BusinessLogicLayer.Store;
 
 using Data.Entities;
 

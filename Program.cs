@@ -1,9 +1,22 @@
+using BusinessLogicLayer.Store;
+using DataAccessLayer.Store;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+#region Registered Services
+
+builder.Services.AddScoped<IStoreRepository, StoreRepository>();
+builder.Services.AddScoped<IStoreService, StoreService>();
+
+#endregion
+
+
 var app = builder.Build();
+
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

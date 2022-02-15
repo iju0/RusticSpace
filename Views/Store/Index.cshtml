@@ -1,0 +1,11 @@
+@model Data.ViewModels.StoreViewModel
+
+@{
+    Layout = "_Layout";
+}
+@foreach (var item in @Model.Stores)
+{
+    <div>@item.Id</div>
+    <div>@item.Name</div>
+    <div>@item.ContactNumber</div>
+}
